@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const clanInfo = require("./apiHelper.js");
-const discordToken = require("./.gitignore/discordToken.js");
-const apiToken = require("./.gitignore/apiToken.js");
+const discordToken = require("./ignorefiles/discordToken.js");
+const apiToken = require("./ignorefiles/apiToken.js");
 const prefix = "!";
 
 client.once("ready", () => {
