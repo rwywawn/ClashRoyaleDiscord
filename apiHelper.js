@@ -17,10 +17,7 @@ function callApi(endpoint, apiKey) {
   });
 }
 
-module.exports = async function playerInfo(playerTag, apiToken) {
-  const url = "https://api.clashroyale.com/v1";
-  const point = url + "/players/%23" + playerTag ;
-
+module.exports = async function apiCaller(point, apiToken) {
   return await callApi(point, apiToken)
     .then(function(data) {
       return data;
