@@ -25,9 +25,10 @@ client.on("message", async message => {
 
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
-
-  if (!client.commands.has(command)) return;
-  // Command handler
+ // Command handler
+  if (!client.commands.has(command)){
+    message.channel.send("Command not found");
+   return};
   try {
     client.commands.get(command).execute(message, args);
   } catch (error) {
